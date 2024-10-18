@@ -1,0 +1,103 @@
+<app-nav></app-nav>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Personal Info</h4>
+
+      <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+        <!-- First and Last Name -->
+        <div class="mb-3 row">
+          <label for="first_name" class="col-sm-2 col-form-label">First Name <span class="text-danger">*</span></label>
+          <div class="col-sm-4">
+            <input type="text" id="first_name" placeholder="Enter First Name" formControlName="first_name"
+              class="form-control" required />
+          </div>
+          <label for="last_name" class="col-sm-2 col-form-label">Last Name <span class="text-danger">*</span></label>
+          <div class="col-sm-4">
+            <input type="text" id="last_name" placeholder="Enter Last Name" formControlName="last_name"
+              class="form-control" required />
+          </div>
+        </div>
+
+        <!-- Email and Phone Number -->
+        <div class="mb-3 row">
+          <label for="email" class="col-sm-2 col-form-label">Email ID <span class="text-danger">*</span></label>
+          <div class="col-sm-4">
+            <input type="email" id="email" placeholder="Enter Email" formControlName="email" class="form-control"
+              required />
+          </div>
+          <label for="contact_number" class="col-sm-2 col-form-label">Phone Number <span
+              class="text-danger">*</span></label>
+          <div class="col-sm-4">
+            <input type="text" id="contact_number" placeholder="Enter Personal Phone Number"
+              formControlName="contact_number" class="form-control" maxlength="10" required />
+          </div>
+        </div>
+
+        <!-- Department and Designation -->
+        <div class="mb-3 row">
+          <label for="department" class="col-sm-2 col-form-label">Department <span class="text-danger">*</span></label>
+          <div class="col-sm-4">
+            <select id="department" class="form-select" required formControlName="department_id">
+              <option value selected>Select Department</option>
+              <option value="3">Human Resources</option>
+              <option value="4">Finance</option>
+              <option value="5">Marketing</option>
+              <option value="6">Sales</option>
+              <option value="7">IT</option>
+              <option value="8">Customer Service</option>
+              <option value="9">Legal</option>
+              <option value="10">Operations</option>
+              <option value="11">Research and Development</option>
+              <option value="12">Procurement</option>
+              <option value="1">Business Intelligence</option>
+              <option value="2">Administration</option>
+            </select>
+          </div>
+          <label for="designation" class="col-sm-2 col-form-label">Designation <span
+              class="text-danger">*</span></label>
+          <div class="col-sm-4">
+            <select id="designation" class="form-select" formControlName="designation_id" required>
+              <option value selected>Select Designation</option>
+              <option value="2">Developer</option>
+              <option value="3">Designer</option>
+              <option value="5">Assistant Manager</option>
+              <option value="6">Team Lead</option>
+              <option value="7">Senior Developer</option>
+              <option value="8">Junior Developer</option>
+              <option value="9">Intern</option>
+              <option value="10">HR Executive</option>
+              <option value="11">Finance Analyst</option>
+              <option value="12">Marketing Specialist</option>
+              <option value="13">Sales Executive</option>
+              <option value="1">Chief Executive Officer</option>
+              <option value="4">Manager</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- User Type -->
+        <div class="mb-3 row">
+          <label for="role_type" class="col-sm-2 col-form-label">User Type <span class="text-danger">*</span></label>
+          <div class="col-sm-4">
+            <select id="role_type" class="form-select" formControlName="role_type" required>
+              <option value selected>Select User Type</option>
+              <option value="ADMIN OPS">Admin Ops</option>
+              <option value="ADMIN CLIENT RELATIONSHIP">
+                Admin Client Relationship
+              </option>
+              <option value="STAFF">Staff</option>
+              <option value="FIELD USER">Field User</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="d-flex justify-content-end">
+          <button type="submit" class="btn btn-info me-2">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

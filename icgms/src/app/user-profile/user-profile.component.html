@@ -1,0 +1,72 @@
+<app-nav></app-nav>
+
+<div class=" container">
+  <div class=" card border-2 border my-3 rounded-2 ">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class=" col-2 fw-semibold ">Personal Information</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class=" fw-semibold fs-6">First Name:</td>
+          <td>{{userData.first_name}}</td>
+        </tr>
+        <tr>
+          <td class=" fw-semibold fs-6">Last Name:</td>
+          <td>{{userData.last_name}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class=" container">
+  <div class=" card border-2 border my-3 rounded-2 ">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class=" col-2 fw-semibold ">Contact Information </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class=" fw-semibold fs-6">email:</td>
+          <td>{{userData.email}}</td>
+        </tr>
+        <tr>
+          <td class=" fw-semibold fs-6">contact_number:</td>
+          <td>{{ userData.contact_number}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class=" container">
+  <div class=" card border-2 border my-3 rounded-2 ">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class=" col-2 fw-semibold ">Role Information </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class=" fw-semibold fs-6">User Type:</td>
+          <td>{{userData.user_type}}</td>
+        </tr>
+        <tr>
+          <td class=" fw-semibold fs-6">Role Type:</td>
+          <td>{{userData.role_type}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

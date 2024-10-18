@@ -1,0 +1,212 @@
+<div class=" bgColor">
+
+<div class="backgroundImg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 p-3 rounded-5 bg-white me-auto my-5">
+        <div class="col-8 m-auto my-5">
+          <img
+            src="https://dev.icgms.sharajman.com/assets/images/logos/logo.png"
+            class="m-auto my-4"
+            style="height: 40px" />
+
+          <h2 class="fw-bold my-2">
+            Welcome to ICGMS <br class="d-none d-sm-block" />
+            Insurance Portal
+          </h2>
+          <div class="fw-semibold my-3">
+            Please enter details below to login.
+          </div>
+          <div>
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+              <div class="row row-gap-3 my-3">
+                <div class="mb-3 col-12 col-sm-6">
+                  <label for="editName" class="form-label">Email</label>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    formControlName="email"
+                    class="form-control"
+                    [ngClass]="{
+                      'is-invalid':
+                        userForm.get('email')?.invalid &&
+                        (userForm.get('email')?.touched ||
+                          userForm.get('email')?.dirty)
+                    }"
+                    id="editName"
+                    placeholder="Email"
+                    aria-describedby="emailHelp" />
+
+                  <div
+                    *ngIf="
+                      userForm.get('email')?.invalid &&
+                      (userForm.get('email')?.touched ||
+                        userForm.get('email')?.dirty)
+                    "
+                    class="text-danger">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+
+                <div class="mb-3 col-12 col-sm-6">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    required
+                    type="password"
+                    name="password"
+                    formControlName="password"
+                    class="form-control"
+                    id="password" />
+                  <div
+                    *ngIf="
+                      userForm.get('password')?.invalid &&
+                      (userForm.get('password')?.touched ||
+                        userForm.get('password')?.dirty)
+                    "
+                    class="text-danger">
+                    Password is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value
+                    id="flexCheckDefault" />
+                  <label
+                    class="form-check-label fw-semibold"
+                    for="flexCheckDefault">
+                    Stay signed in
+                  </label>
+                </div>
+
+                <div>
+                  Trouble signing in? <a class="text-primary"> Click Here </a>
+                </div>
+              </div>
+
+              <button type="submit" class="btn w-100 loginBtn my-4">
+                Log in
+              </button>
+            </form>
+
+            <div class="d-flex align-items-center gap-2 w-100">
+              <hr class="w-100 my-0" />
+              or
+              <hr class="w-100 my-0" />
+            </div>
+
+            <div class=" d-flex align-items-center justify-content-between">
+
+            <button class="btn cst-btn-outline">
+              Log In With Policy Number
+              <i><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="5"
+                  height="6"
+                  viewBox="0 0 5 6"
+                  fill="none">
+                  <path
+                    d="M2.61464 3.00005L0.728638 1.11472L1.6713 0.171387L4.49997 3.00005L1.6713 5.82872L0.728638 4.88539L2.61464 3.00005Z"
+                    fill="#000000"></path></svg></i>
+            </button>
+            <button class="btn cst-btn-outline">
+              Log In With Policy Number
+              <i><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="5"
+                  height="6"
+                  viewBox="0 0 5 6"
+                  fill="none">
+                  <path
+                    d="M2.61464 3.00005L0.728638 1.11472L1.6713 0.171387L4.49997 3.00005L1.6713 5.82872L0.728638 4.88539L2.61464 3.00005Z"
+                    fill="#000000"></path></svg></i>
+            </button>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <div class="backgroundImg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 p-3 rounded-5 bg-white me-auto my-5">
+        <div class="col-8 m-auto my-5">
+          <img
+            src="https://dev.icgms.sharajman.com/assets/images/logos/logo.png"
+            class="m-auto my-4"
+            style="height: 40px"
+          />
+
+          <h2 class="fw-bold my-2">
+            Welcome to ICGMS <br class="d-none d-sm-block" />
+            Insurance Portal
+          </h2>
+          <div class="fw-semibold my-3">
+            Please enter details below to login.
+          </div>
+          <div>
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+              <div class="row row-gap-3 my-3">
+                <div class="mb-3 col-12 col-sm-6">
+                  <label for="editName" class="form-label">Email</label>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    formControlName="email"
+                    class="form-control"
+                    id="editName"
+                    aria-describedby="emailHelp"
+                  />
+
+                </div>
+                <div class="mb-3 col-12 col-sm-6">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    required
+                    type="password"
+                    name="password"
+                    formControlName="password"
+                    class="form-control"
+                    id="password"
+                  />
+                  <div
+                    *ngIf="
+                      this.userForm.get('age')?.hasError('required') &&
+                      showError
+                    "
+                    class="text-danger"
+                  >
+                    Age is required.
+                  </div>
+                  <div
+                    *ngIf="
+                      this.userForm.get('age')?.hasError('max') && showError
+                    "
+                    class="text-danger"
+                  >
+                    Age must be less then 100.
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn w-100 loginBtn my-4">
+                Log in
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

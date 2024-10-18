@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark  ">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Dashboard</a> -->
+    <img id="brand_logo" src="https://dev.icgms.sharajman.com/assets/images/logos/logo.png">
+    <div>
+
+
+
+        <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">My Profile</a></li>
+          <li>
+            <a
+              routerLink="/user-profile"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+              class="nav-link"
+            >
+              <button class="btn btn-outline-primary">My Profile</button>
+            </a>
+          </li>
+          <li><a class="dropdown-item" href="#">Log Out</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul> -->
+
+        <div class="flex-shrink-0 dropdown">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small shadow " style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34.4px, 0px);" data-popper-placement="bottom-end">
+            <li>
+              <a
+                routerLink="/user-profile"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+                class="dropdown-item"
+              >
+                <!-- <button class="btn btn-outline-primary"> -->
+                  My Profile
+                <!-- </button> -->
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="/manage-users"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+                class="dropdown-item"
+              >
+                <!-- <button class="btn btn-outline-primary"> -->
+                 Manage User
+                <!-- </button> -->
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><button class="dropdown-item" (click)="logOut()" href="#">Log Out</button></li>
+            <!-- <li><a class="dropdown-item" href="#">Sign out</a></li> -->
+          </ul>
+        </div>
+
+
+    </div>
+  </div>
+
+</nav>

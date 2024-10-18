@@ -1,0 +1,47 @@
+<app-nav></app-nav>
+
+<div>
+
+
+  <div class=" container">
+    <div class="  "><a type="button" class="btn btn-primary btn-sm me-auto m-4 "    routerLink="/manage-users/add-user"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page">+ Add User</a></div>
+    <div class=" card border-2 border my-3 rounded-2 ">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" class=" fw-semibold ">S.NO </th>
+            <th scope="col" class=" fw-semibold ">First Name </th>
+            <th scope="col" class=" fw-semibold ">Last Name </th>
+            <th scope="col" class=" fw-semibold ">Email </th>
+            <th scope="col" class=" fw-semibold ">Department </th>
+            <th scope="col" class=" fw-semibold ">Designation </th>
+            <th scope="col" class=" fw-semibold ">User Type </th>
+            <th scope="col" class=" fw-semibold ">Phone No </th>
+            <th scope="col" class=" fw-semibold ">Action </th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of usersData; track item.id) {
+            <tr>
+              <!-- <td class=" fw-semibold fs-6">User Type:</td> -->
+              <td>{{item.s_no}}</td>
+              <td>{{item.first_name}}</td>
+              <td>{{item.last_name}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.department_name}}</td>
+              <td>{{item.designation_name}}</td>
+              <td>{{item.role_type}}</td>
+              <td>{{item.contact_number}}</td>
+              <td><button class="btn btn-outline-dark btn-sm" (click)="editUser(item)">edit</button></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+
+</div>
